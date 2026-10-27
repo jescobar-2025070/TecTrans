@@ -1,0 +1,285 @@
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    max-width: 100vw;
+    overscroll-behavior-x: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+  html.dark body {
+    background-color: #0a1118;
+    color: #f1f5f9;
+  }
+  main > :first-child { margin-top: 0 !important; }
+  main > :last-child { margin-bottom: 0 !important; }
+  h1, h2, h3, h4, h5, h6, p, span, a, div {
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+}
+
+/* ── Selection ── */
+::selection {
+  background: #2c37c7;
+  color: #ffffff;
+}
+html.dark ::selection {
+  background: #52b6f3;
+  color: #002117;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb { background: #b6cbe0; border-radius: 99px; }
+::-webkit-scrollbar-track { background: #f8fbff; }
+html.dark ::-webkit-scrollbar-thumb { background: #334155; }
+html.dark ::-webkit-scrollbar-track { background: #0a1118; }
+
+/* ── Skip link (accessibility) ── */
+.skip-link {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 100;
+  transform: translateY(-160%);
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background: #0870f3;
+  color: #fff;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+.skip-link:focus { transform: translateY(0); }
+:focus-visible { outline: 3px solid #2c37c7; outline-offset: 3px; }
+html.dark .skip-link { background: #2c37c7; border: 1px solid #52b6f3; }
+html.dark :focus-visible { outline: 3px solid #52b6f3; outline-offset: 3px; }
+
+/* ── Header safe-area ── */
+header {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+section[id] { scroll-margin-top: 4.5rem; }
+#inicio { scroll-margin-top: 4rem; }
+
+/* ── Mobile navigation ── */
+.mobile-navigation summary {
+  list-style: none;
+  user-select: none;
+}
+.mobile-navigation summary::-webkit-details-marker { display: none; }
+.mobile-navigation[open] .nav-icon-menu { display: none !important; }
+.mobile-navigation[open] .nav-icon-close { display: block !important; }
+.mobile-nav-panel {
+  background-color: #ffffff;
+  max-height: calc(100vh - 4.5rem - env(safe-area-inset-top, 0px));
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.15), 0 10px 10px -5px rgba(0,0,0,0.04);
+}
+html.dark .mobile-nav-panel {
+  background-color: #0b1319;
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.7), 0 10px 10px -5px rgba(0,0,0,0.5);
+}
+
+/* ── Services scroll-deck section ── */
+.services-scroll-section {
+  position: relative;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  min-height: calc(100vh - 4rem);
+  --service-card-count: 3;
+}
+.services-sticky-stage {
+  position: sticky;
+  top: 4rem;
+  min-height: calc(100vh - 4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: clamp(1rem, 2.5vh, 2.5rem);
+  padding-bottom: clamp(1rem, 2.5vh, 2.5rem);
+  box-sizing: border-box;
+}
+.services-sticky-stage > div:first-child { margin-bottom: clamp(0.75rem, 2vh, 1.75rem); }
+.services-sticky-stage h2 { max-width: 48rem; }
+.services-deck {
+  height: clamp(380px, 54vh, 480px);
+  overflow: hidden;
+}
+.services-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+}
+.service-card {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  will-change: auto;
+  overflow: visible;
+  overscroll-behavior: contain;
+}
+.services-static .services-deck { height: auto; overflow: visible; }
+.services-static .services-track { flex-direction: column; gap: 1.25rem; height: auto; transform: none !important; }
+.services-static .service-card { flex: initial; width: 100%; min-width: 0; height: auto; }
+.service-card h3 { line-height: 1.25; }
+.service-card[aria-hidden="true"] { pointer-events: none; }
+.service-card a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ── General touch targets ── */
+a, button, summary, input, textarea, select {
+  touch-action: manipulation;
+}
+input, textarea, select { max-width: 100%; }
+img { max-width: 100%; height: auto; }
+
+/* ── Tablet & Mobile responsive ── */
+@media (max-width: 1023px) {
+  html { scroll-padding-top: 4.5rem; }
+  .services-scroll-section {
+    min-height: auto !important;
+    height: auto !important;
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+  }
+  .services-sticky-stage {
+    position: static;
+    min-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .services-deck {
+    height: auto;
+    overflow: visible;
+  }
+  .services-track {
+    flex-direction: column;
+    gap: 1.25rem;
+    height: auto;
+    transform: none !important;
+  }
+  .service-card {
+    position: relative !important;
+    flex: initial;
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    inset: auto !important;
+    min-height: auto !important;
+    transform: none !important;
+    opacity: 1 !important;
+    z-index: auto !important;
+    pointer-events: auto !important;
+    overflow: visible;
+    padding: clamp(1.25rem, 4vw, 2rem) !important;
+    transition: none !important;
+  }
+  .service-card[aria-hidden="true"] { pointer-events: auto; }
+  .service-card > div:last-child { flex-wrap: wrap; gap: 1rem; }
+  .service-card h3 { font-size: clamp(1.25rem, 4vw, 1.75rem); }
+}
+
+@media (max-width: 767px) {
+  .services-scroll-section {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+  header .h-16 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* ── Typography fallbacks ── */
+.font-headline-lg {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+@media (min-width: 640px) {
+  .font-headline-lg { font-size: 2rem; line-height: 2.5rem; }
+}
+@media (min-width: 1024px) {
+  .font-headline-lg { font-size: 2.5rem; line-height: 3rem; }
+}
+
+.font-headline-md {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+@media (min-width: 640px) {
+  .font-headline-md { font-size: 1.5rem; line-height: 2rem; }
+}
+
+.font-headline-sm {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  font-weight: 600;
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .services-sticky-stage { position: static; }
+  .services-scroll-section { min-height: auto !important; height: auto !important; }
+  .services-deck { display: flex; flex-direction: column; height: auto; gap: 1rem; }
+  .service-card {
+    position: relative !important;
+    flex: initial;
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    inset: auto !important;
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto !important;
+    min-height: 0;
+  }
+}
+
+/* ── Select styling ── */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23707974'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1.25rem;
+  padding-right: 2.5rem;
+}
+
+
+/* Theme toggle icons are inline SVGs, independent of the icon font. */.theme-icon-dark { display: none; }
+html.dark .theme-icon-light { display: none; }
+html.dark .theme-icon-dark { display: block; }
