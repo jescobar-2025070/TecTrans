@@ -71,95 +71,22 @@
     });
 
     // ─────────────────────────────────────────────────────────────────
-    // Services Scroll-Deck
-    // ─────────────────────────────────────────────────────────────────
-    const section = document.querySelector('.services-scroll-section');
-    const stage = section?.querySelector('.services-sticky-stage');
-    const deck = section?.querySelector('#services-deck');
-    const track = deck?.querySelector('.services-track');
-    const cards = track ? Array.from(track.querySelectorAll('.service-card')) : [];
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const mobileLayout = window.matchMedia('(max-width: 1023px)');
-    let frameRequested = false;
-    let currentActive = -1;
-
-    const setCardAccessibility = (activeIndex, mobile = false) => {
-      cards.forEach((card, index) => {
-        const inactive = !mobile && index !== activeIndex;
-        card.setAttribute('aria-hidden', String(inactive));
-        card.querySelectorAll('a, button, input, select, textarea, [tabindex]').forEach((el) => {
-          if (inactive) {
-            if (!el.hasAttribute('data-original-tabindex')) {
-              el.dataset.originalTabindex = el.hasAttribute('tabindex') ? el.getAttribute('tabindex') : '';
-            }
-            el.setAttribute('tabindex', '-1');
-          } else if (el.hasAttribute('data-original-tabindex')) {
-            const orig = el.dataset.originalTabindex;
-            if (orig === '') el.removeAttribute('tabindex');
-            else el.setAttribute('tabindex', orig);
-            delete el.dataset.originalTabindex;
-          }
-        });
-      });
-    };
-
-    const useStaticCards = () => {
-      if (section) {
-        section.style.height = 'auto';
-        section.classList.add('services-static');
-      }
-      if (track) track.style.transform = ''; 
-      cards.forEach((card) => {
+        // Services shown in normal document flow
+    const servicesSection = document.querySelector('.services-scroll-section');
+    const servicesTrack = servicesSection?.querySelector('.services-track');
+    const serviceCards = servicesTrack ? Array.from(servicesTrack.querySelectorAll('.service-card')) : [];
+    if (servicesSection && servicesTrack && serviceCards.length) {
+      servicesSection.style.height = 'auto';
+      servicesSection.classList.add('services-static');
+      servicesTrack.style.transform = '';
+      serviceCards.forEach((card) => {
         card.style.transform = '';
         card.style.opacity = '';
         card.style.zIndex = '';
         card.style.pointerEvents = '';
+        card.setAttribute('aria-hidden', 'false');
       });
-      setCardAccessibility(0, true);
-    };
-
-    const setScrollLayout = () => {
-      if (!section || !stage || !deck || !track || cards.length < 2) return;
-      if (mobileLayout.matches || reducedMotion.matches) { useStaticCards(); return; }
-      section.classList.remove('services-static');
-      const stageHeight = stage.offsetHeight;
-      section.style.height = `${stageHeight + (cards.length - 1) * window.innerHeight}px`;
-      updateFromScroll(true);
-    };
-
-    const updateFromScroll = (force = false) => {
-      frameRequested = false;
-      if (!section || !stage || !deck || !track || mobileLayout.matches || reducedMotion.matches) return;
-      const rect = section.getBoundingClientRect();
-      const available = Math.max(1, section.offsetHeight - stage.offsetHeight);
-      const progress = Math.min(cards.length - 1, Math.max(0, -rect.top / available * (cards.length - 1)));
-      const activeIndex = Math.min(cards.length - 1, Math.floor(progress + 0.001));
-      if (!force && activeIndex === currentActive && Math.abs(progress - activeIndex) < 0.015) return;
-      currentActive = activeIndex;
-
-      track.style.transform = `translate3d(${-progress * deck.clientWidth}px, 0, 0)`;
-      cards.forEach((card, index) => {
-        card.style.pointerEvents = index === activeIndex ? 'auto' : 'none';
-      });
-      setCardAccessibility(activeIndex);
-    };
-
-    const requestUpdate = () => {
-      if (frameRequested) return;
-      frameRequested = true;
-      window.requestAnimationFrame(() => updateFromScroll());
-    };
-
-    if (section && stage && deck && track && cards.length > 0) {
-      section.style.setProperty('--service-card-count', String(cards.length));
-      window.addEventListener('scroll', requestUpdate, { passive: true });
-      window.addEventListener('resize', setScrollLayout, { passive: true });
-      mobileLayout.addEventListener?.('change', setScrollLayout);
-      reducedMotion.addEventListener?.('change', setScrollLayout);
-      setScrollLayout();
     }
-
-    // ─────────────────────────────────────────────────────────────────
     // Mobile Navigation Controls
     // ─────────────────────────────────────────────────────────────────
     const mobileNavDetails = document.querySelectorAll('.mobile-navigation');
