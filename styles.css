@@ -19,7 +19,7 @@
     transition: background-color 0.25s ease, color 0.25s ease;
   }
   html.dark body {
-    background-color: #0a1118;
+    background-color: #071a33;
     color: #f1f5f9;
   }
   main > :first-child { margin-top: 0 !important; }
@@ -44,8 +44,8 @@ html.dark ::selection {
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-thumb { background: #b6cbe0; border-radius: 99px; }
 ::-webkit-scrollbar-track { background: #f8fbff; }
-html.dark ::-webkit-scrollbar-thumb { background: #334155; }
-html.dark ::-webkit-scrollbar-track { background: #0a1118; }
+html.dark ::-webkit-scrollbar-thumb { background: #12345d; }
+html.dark ::-webkit-scrollbar-track { background: #071a33; }
 
 /* ── Skip link (accessibility) ── */
 .skip-link {
@@ -89,7 +89,7 @@ section[id] { scroll-margin-top: 4.5rem; }
   box-shadow: 0 20px 25px -5px rgba(0,0,0,0.15), 0 10px 10px -5px rgba(0,0,0,0.04);
 }
 html.dark .mobile-nav-panel {
-  background-color: #0b1319;
+  background-color: #081a31;
   box-shadow: 0 20px 25px -5px rgba(0,0,0,0.7), 0 10px 10px -5px rgba(0,0,0,0.5);
 }
 

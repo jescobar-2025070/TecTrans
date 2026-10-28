@@ -21,14 +21,14 @@
   <link rel="stylesheet" href="../assets/fontawesome-free-6.2.0-web/css/all.min.css"/>
   <link href="styles.css" rel="stylesheet"/>
 </head>
-<body class="bg-surface dark:bg-[#0a1118] font-body text-on-surface dark:text-slate-100 relative transition-colors duration-200">
+<body class="bg-surface dark:bg-[#071a33] font-body text-on-surface dark:text-slate-100 relative transition-colors duration-200">
 
   <a class="skip-link" href="#inicio">Saltar al contenido</a>
 
   <!-- ═══════════════════════════════════════
        HEADER / NAVEGACIÓN
   ═══════════════════════════════════════ -->
-  <header class="fixed top-0 w-full z-50 bg-surface-container-lowest/90 dark:bg-[#0b1319]/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,53,39,0.06)] dark:shadow-[0_1px_12px_rgba(0,0,0,0.5)] border-b border-outline-variant/20 dark:border-white/10 transition-colors duration-200">
+  <header class="fixed top-0 w-full z-50 bg-surface-container-lowest/90 dark:bg-[#081a31]/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,53,39,0.06)] dark:shadow-[0_1px_12px_rgba(0,0,0,0.5)] border-b border-outline-variant/20 dark:border-white/10 transition-colors duration-200">
     <div class="h-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between">
       <!-- Logo -->
       <a class="flex items-center gap-2.5 group" href="#inicio">
@@ -50,24 +50,24 @@
       <div class="flex items-center gap-2 sm:gap-3">
         <!-- Dark Mode Toggle -->
         <button id="theme-toggle" type="button" aria-label="Cambiar a modo oscuro" title="Alternar modo oscuro / claro"
-          class="w-10 h-10 rounded-xl bg-surface-container-high dark:bg-[#162532] text-on-surface dark:text-amber-300 flex items-center justify-center hover:bg-surface-container-highest dark:hover:bg-[#1e3345] border border-outline-variant/30 dark:border-white/10 transition-all cursor-pointer flex-shrink-0 shadow-sm active:scale-95">
+          class="w-10 h-10 rounded-xl bg-surface-container-high dark:bg-[#12345d] text-on-surface dark:text-amber-300 flex items-center justify-center hover:bg-surface-container-highest dark:hover:bg-[#16416f] border border-outline-variant/30 dark:border-white/10 transition-all cursor-pointer flex-shrink-0 shadow-sm active:scale-95">
           <svg class="theme-icon-light" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/></svg>
           <svg class="theme-icon-dark" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
         </button>
 
         <!-- CTA -->
-        <a class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-primary dark:bg-blue-600 text-on-primary rounded-lg text-sm font-semibold hover:bg-primary-container dark:hover:bg-blue-500 transition-all shadow-sm whitespace-nowrap" href="#contacto">
+        <a class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-primary dark:bg-primary text-on-primary rounded-lg text-sm font-semibold hover:bg-primary-container dark:hover:bg-primary-container transition-all shadow-sm whitespace-nowrap" href="#contacto">
           Contactar ahora
         </a>
 
         <!-- Mobile Menu -->
         <details class="mobile-navigation lg:hidden relative">
-          <summary class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-surface-container-high dark:bg-[#162532] text-primary dark:text-sky-300 cursor-pointer hover:bg-surface-container-highest dark:hover:bg-[#1e3345] border border-outline-variant/30 dark:border-white/10 transition-colors">
+          <summary class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-surface-container-high dark:bg-[#12345d] text-primary dark:text-sky-300 cursor-pointer hover:bg-surface-container-highest dark:hover:bg-[#16416f] border border-outline-variant/30 dark:border-white/10 transition-colors">
             <i class="fa-solid fa-bars nav-icon-menu" aria-hidden="true"></i>
             <i class="fa-solid fa-xmark nav-icon-close hidden" aria-hidden="true"></i>
           </summary>
           <div class="mobile-nav-backdrop fixed inset-0 top-16 bg-black/60 dark:bg-black/80 backdrop-blur-sm z-40" aria-hidden="true"></div>
-          <nav class="mobile-nav-panel fixed sm:absolute top-16 left-0 right-0 w-full bg-white dark:bg-[#0b1319] shadow-2xl border-b border-outline-variant/40 dark:border-white/15 p-5 flex flex-col gap-2 z-50 transition-colors duration-200">
+          <nav class="mobile-nav-panel fixed sm:absolute top-16 left-0 right-0 w-full bg-white dark:bg-[#081a31] shadow-2xl border-b border-outline-variant/40 dark:border-white/15 p-5 flex flex-col gap-2 z-50 transition-colors duration-200">
             <a class="mobile-nav-item text-base text-on-surface dark:text-slate-200 hover:text-primary dark:hover:text-sky-300 hover:bg-surface-container-low dark:hover:bg-[#152330] px-4 py-2.5 rounded-xl font-medium transition-colors" data-path="inicio" href="#inicio">Inicio</a>
             <a class="mobile-nav-item text-base text-on-surface dark:text-slate-200 hover:text-primary dark:hover:text-sky-300 hover:bg-surface-container-low dark:hover:bg-[#152330] px-4 py-2.5 rounded-xl font-medium transition-colors" data-path="nosotros" href="#nosotros">Nosotros</a>
             <a class="mobile-nav-item text-base text-on-surface dark:text-slate-200 hover:text-primary dark:hover:text-sky-300 hover:bg-surface-container-low dark:hover:bg-[#152330] px-4 py-2.5 rounded-xl font-medium transition-colors" data-path="soluciones" href="#soluciones">Soluciones</a>
@@ -85,7 +85,7 @@
               </button>
             </div>
             <div class="pt-2 border-t border-outline-variant/20 dark:border-white/10 sm:hidden">
-              <a class="flex items-center justify-center w-full py-3 bg-primary dark:bg-blue-600 text-on-primary rounded-xl font-headline text-title-md font-semibold shadow-md" href="#contacto">Contactar ahora</a>
+              <a class="flex items-center justify-center w-full py-3 bg-primary dark:bg-primary text-on-primary rounded-xl font-headline text-title-md font-semibold shadow-md" href="#contacto">Contactar ahora</a>
             </div>
           </nav>
         </details>
@@ -93,20 +93,20 @@
     </div>
   </header>
 
-  <main class="w-full pt-16 bg-surface dark:bg-[#0a1118] transition-colors duration-200">
+  <main class="w-full pt-16 bg-surface dark:bg-[#071a33] transition-colors duration-200">
     <div class="flex flex-col w-full">
 
       <!-- ═══════════════════════════════════════
            HERO / INICIO
       ═══════════════════════════════════════ -->
-      <section class="relative w-full overflow-hidden bg-surface dark:bg-[#0a1118] py-16 sm:py-24 lg:py-32 transition-colors duration-200" id="inicio">
+      <section class="relative w-full overflow-hidden bg-surface dark:bg-[#071a33] py-16 sm:py-24 lg:py-32 transition-colors duration-200" id="inicio">
         <img src="images/landing-page/carousel/banner-one.webp" alt="" class="hero-background is-active absolute inset-0 z-0 h-full w-full object-cover pointer-events-none" aria-hidden="true" />
         <img src="images/landing-page/carousel/banner-two.webp" alt="" class="hero-background absolute inset-0 z-0 h-full w-full object-cover pointer-events-none" aria-hidden="true" />
         <img src="images/landing-page/carousel/banner-three.webp" alt="" class="hero-background absolute inset-0 z-0 h-full w-full object-cover pointer-events-none" aria-hidden="true" />
-        <div class="absolute inset-0 z-0 bg-gradient-to-r from-white/50 via-white/45 to-[#e8f2ff]/40 dark:from-[#0a1118]/50 dark:via-[#0a1118]/45 dark:to-[#0a1118]/40 pointer-events-none"></div>
+        <div class="absolute inset-0 z-0 bg-gradient-to-r from-white/50 via-white/45 to-[#e8f2ff]/40 dark:from-[#071a33]/50 dark:via-[#071a33]/45 dark:to-[#071a33]/40 pointer-events-none"></div>
         <!-- decorative blobs -->
-        <div class="absolute -top-40 -right-40 w-96 h-96 bg-primary/10 dark:bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute top-1/2 -left-20 w-80 h-80 bg-secondary/10 dark:bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-primary/10 dark:bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/2 -left-20 w-80 h-80 bg-secondary/10 dark:bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center relative z-10">
           <!-- Text -->
@@ -119,10 +119,10 @@
               Conectamos a todos los jugadores de la industria y proveemos un servicio end-to-end. Soluciones de pago inteligentes para bancos, cooperativas, retail y gobierno en Centroamérica.
             </p>
             <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2 w-full sm:w-auto">
-              <a class="px-6 py-3 bg-primary dark:bg-blue-600 text-on-primary rounded-lg font-headline text-title-md font-semibold hover:bg-primary-container dark:hover:bg-blue-500 transition-all shadow-md text-center" href="#soluciones">
+              <a class="px-6 py-3 bg-primary dark:bg-primary text-on-primary rounded-lg font-headline text-title-md font-semibold hover:bg-primary-container dark:hover:bg-primary-container transition-all shadow-md text-center" href="#soluciones">
                 Ver Soluciones
               </a>
-              <a class="px-6 py-3 bg-surface-container-high dark:bg-[#162532] text-on-surface dark:text-slate-200 hover:bg-surface-container-highest dark:hover:bg-[#1e3345] border border-transparent dark:border-white/10 rounded-lg font-headline text-title-md font-semibold transition-all text-center" href="#contacto">
+              <a class="px-6 py-3 bg-surface-container-high dark:bg-[#12345d] text-on-surface dark:text-slate-200 hover:bg-surface-container-highest dark:hover:bg-[#16416f] border border-transparent dark:border-white/10 rounded-lg font-headline text-title-md font-semibold transition-all text-center" href="#contacto">
                 Contactar un experto
               </a>
             </div>
@@ -151,7 +151,7 @@
       <!-- ═══════════════════════════════════════
            SOBRE NOSOTROS
       ═══════════════════════════════════════ -->
-      <section class="w-full py-16 sm:py-24 bg-surface-container-low dark:bg-[#0d1620] transition-colors duration-200 relative overflow-hidden" id="nosotros">
+      <section class="w-full py-16 sm:py-24 bg-surface-container-low dark:bg-[#0b1f3a] transition-colors duration-200 relative overflow-hidden" id="nosotros">
         <img src="images/landing-page/about-us-one/blue-tube.png" alt="" class="absolute z-0 -top-5 right-8 w-12 sm:w-16 opacity-50 pointer-events-none" />
         <img src="images/landing-page/about-us-one/yellow-tube.png" alt="" class="absolute z-0 bottom-20 -left-10 w-28 sm:w-40 opacity-45 pointer-events-none" />
         <img src="images/landing-page/about-us-one/yellow-star.png" alt="" class="absolute z-0 top-1/3 right-8 w-8 opacity-60 pointer-events-none" />
@@ -243,7 +243,7 @@
       <!-- ═══════════════════════════════════════
            SOLUCIONES — scroll-deck
       ═══════════════════════════════════════ -->
-      <section class="w-full bg-surface dark:bg-[#0a1118] services-scroll-section transition-colors duration-200 relative" id="soluciones">
+      <section class="w-full bg-surface dark:bg-[#071a33] services-scroll-section transition-colors duration-200 relative" id="soluciones">
         <img src="images/landing-page/solution/blue-circle.webp" alt="" class="absolute z-0 -top-12 -right-16 w-44 sm:w-64 opacity-10 pointer-events-none" />
         <img src="images/landing-page/solution/yellow-tube.webp" alt="" class="absolute z-0 bottom-10 -left-8 w-28 sm:w-40 opacity-35 pointer-events-none" />
         <img src="images/landing-page/solution/blue-tube.webp" alt="" class="absolute z-0 top-1/2 right-0 w-24 opacity-30 pointer-events-none" />
@@ -259,7 +259,7 @@
             <div class="services-track">
 
             <!-- Card 1: Medios de Pago -->
-            <article aria-hidden="false" class="service-card is-active bg-surface-container-lowest dark:bg-[#111e29] rounded-2xl sm:rounded-3xl p-5 sm:p-7 lg:p-8 shadow-xl transition-all duration-300 flex flex-col justify-between border border-surface-container-highest dark:border-white/10" style="--card-index: 0;">
+            <article aria-hidden="false" class="service-card is-active bg-surface-container-lowest dark:bg-[#102b4e] rounded-2xl sm:rounded-3xl p-5 sm:p-7 lg:p-8 shadow-xl transition-all duration-300 flex flex-col justify-between border border-surface-container-highest dark:border-white/10" style="--card-index: 0;">
               <div>
                 <img src="images/landing-page/solution/solutions-medios%20de%20pago.webp" alt="Soluciones de medios de pago" class="w-full h-12 sm:h-14 object-cover rounded-xl mb-3" loading="lazy" />
                 <h3 class="text-xl sm:text-2xl lg:text-headline-lg font-bold font-headline text-on-surface dark:text-white mb-3 sm:mb-4">Medios de Pago</h3>
@@ -277,12 +277,12 @@
               </div>
               <div class="flex flex-col sm:flex-row sm:items-center justify-between pt-5 sm:pt-6 border-t border-outline-variant/20 dark:border-white/10 gap-3 sm:gap-4 mt-6">
                 <span class="text-sm font-semibold text-primary dark:text-sky-300">Disponible en 7 países</span>
-                <a class="px-5 py-2.5 bg-primary dark:bg-blue-600 text-on-primary rounded-lg font-semibold hover:bg-primary-container dark:hover:bg-blue-500 transition-colors text-center inline-flex items-center justify-center" href="#contacto">Solicitar demo</a>
+                <a class="px-5 py-2.5 bg-primary dark:bg-primary text-on-primary rounded-lg font-semibold hover:bg-primary-container dark:hover:bg-primary-container transition-colors text-center inline-flex items-center justify-center" href="#contacto">Solicitar demo</a>
               </div>
             </article>
 
             <!-- Card 2: Soluciones Administrativas -->
-            <article aria-hidden="true" class="service-card bg-surface-container-lowest dark:bg-[#111e29] rounded-2xl sm:rounded-3xl p-5 sm:p-7 lg:p-8 shadow-xl transition-all duration-300 flex flex-col justify-between border border-surface-container-highest dark:border-white/10" style="--card-index: 1;">
+            <article aria-hidden="true" class="service-card bg-surface-container-lowest dark:bg-[#102b4e] rounded-2xl sm:rounded-3xl p-5 sm:p-7 lg:p-8 shadow-xl transition-all duration-300 flex flex-col justify-between border border-surface-container-highest dark:border-white/10" style="--card-index: 1;">
               <div>
                 <img src="images/landing-page/solution/solutions-administrativas.webp" alt="Soluciones administrativas" class="w-full h-12 sm:h-14 object-cover rounded-xl mb-3" loading="lazy" />
                 <h3 class="text-xl sm:text-2xl lg:text-headline-lg font-bold font-headline text-on-surface dark:text-white mb-3 sm:mb-4">Soluciones Administrativas</h3>
@@ -300,12 +300,12 @@
               </div>
               <div class="flex flex-col sm:flex-row sm:items-center justify-between pt-5 sm:pt-6 border-t border-outline-variant/20 dark:border-white/10 gap-3 sm:gap-4 mt-6">
                 <span class="text-sm font-semibold text-primary dark:text-sky-300">Integración con sistemas legados</span>
-                <a class="px-5 py-2.5 bg-primary dark:bg-blue-600 text-on-primary rounded-lg font-semibold hover:bg-primary-container dark:hover:bg-blue-500 transition-colors text-center inline-flex items-center justify-center" href="#contacto">Solicitar demo</a>
+                <a class="px-5 py-2.5 bg-primary dark:bg-primary text-on-primary rounded-lg font-semibold hover:bg-primary-container dark:hover:bg-primary-container transition-colors text-center inline-flex items-center justify-center" href="#contacto">Solicitar demo</a>
               </div>
             </article>
 
             <!-- Card 3: Soluciones Digitales -->
-            <article aria-hidden="true" class="service-card bg-surface-container-lowest dark:bg-[#111e29] rounded-2xl sm:rounded-3xl p-5 sm:p-7 lg:p-8 shadow-xl transition-all duration-300 flex flex-col justify-between border border-surface-container-highest dark:border-white/10" style="--card-index: 2;">
+            <article aria-hidden="true" class="service-card bg-surface-container-lowest dark:bg-[#102b4e] rounded-2xl sm:rounded-3xl p-5 sm:p-7 lg:p-8 shadow-xl transition-all duration-300 flex flex-col justify-between border border-surface-container-highest dark:border-white/10" style="--card-index: 2;">
               <div>
                 <img src="images/landing-page/solution/solutions-soluciones%20digitales.webp" alt="Soluciones digitales" class="w-full h-12 sm:h-14 object-cover rounded-xl mb-3" loading="lazy" />
                 <h3 class="text-xl sm:text-2xl lg:text-headline-lg font-bold font-headline text-on-surface dark:text-white mb-3 sm:mb-4">Soluciones Digitales</h3>
@@ -323,7 +323,7 @@
               </div>
               <div class="flex flex-col sm:flex-row sm:items-center justify-between pt-5 sm:pt-6 border-t border-outline-variant/20 dark:border-white/10 gap-3 sm:gap-4 mt-6">
                 <span class="text-sm font-semibold text-primary dark:text-sky-300">Adaptable a entes financieros</span>
-                <a class="px-5 py-2.5 bg-primary dark:bg-blue-600 text-on-primary rounded-lg font-semibold hover:bg-primary-container dark:hover:bg-blue-500 transition-colors text-center inline-flex items-center justify-center" href="#contacto">Solicitar demo</a>
+                <a class="px-5 py-2.5 bg-primary dark:bg-primary text-on-primary rounded-lg font-semibold hover:bg-primary-container dark:hover:bg-primary-container transition-colors text-center inline-flex items-center justify-center" href="#contacto">Solicitar demo</a>
               </div>
             </article>
 
@@ -348,7 +348,7 @@
       <!-- ═══════════════════════════════════════
            INDUSTRIAS
       ═══════════════════════════════════════ -->
-      <section class="w-full py-16 sm:py-24 bg-surface dark:bg-[#0a1118] transition-colors duration-200 relative overflow-hidden" id="industrias">
+      <section class="w-full py-16 sm:py-24 bg-surface dark:bg-[#071a33] transition-colors duration-200 relative overflow-hidden" id="industrias">
         <img src="images/landing-page/industry/blue-circle-second.webp" alt="" class="absolute z-0 -top-16 -right-20 w-56 sm:w-72 opacity-10 pointer-events-none" />
         <img src="images/landing-page/industry/yellow-tube.png" alt="" class="absolute z-0 bottom-20 -left-8 w-28 sm:w-40 opacity-35 pointer-events-none" />
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
@@ -417,7 +417,7 @@
           <!-- CTA Strip -->
           <div class="mt-10 sm:mt-14 pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 border-t border-outline-variant/20 dark:border-white/10">
             <div class="flex items-start sm:items-center gap-4">
-              <div class="w-10 h-10 rounded-xl bg-surface-container-high dark:bg-[#162532] text-primary dark:text-sky-300 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0 border border-transparent dark:border-white/10">
+              <div class="w-10 h-10 rounded-xl bg-surface-container-high dark:bg-[#12345d] text-primary dark:text-sky-300 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0 border border-transparent dark:border-white/10">
                 <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 13v-2a9 9 0 0 1 18 0v2"/><path d="M5 13h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H6a3 3 0 0 1-3-3v-3Zm14 0h-2a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h1a3 3 0 0 0 3-3v-3Z"/><path d="M18 19a5 5 0 0 1-5 3h-1"/></svg>
               </div>
               <div>
@@ -425,7 +425,7 @@
                 <div class="text-xs sm:text-body-sm text-on-surface-variant dark:text-slate-400 mt-0.5">Diseñamos soluciones a la medida de tu organización. Hablemos.</div>
               </div>
             </div>
-            <a class="w-full sm:w-auto text-center px-6 py-3 bg-primary dark:bg-blue-600 text-on-primary rounded-lg font-headline text-title-md font-semibold hover:bg-primary-container dark:hover:bg-blue-500 transition-colors shadow-sm whitespace-nowrap flex-shrink-0" href="#contacto">
+            <a class="w-full sm:w-auto text-center px-6 py-3 bg-primary dark:bg-primary text-on-primary rounded-lg font-headline text-title-md font-semibold hover:bg-primary-container dark:hover:bg-primary-container transition-colors shadow-sm whitespace-nowrap flex-shrink-0" href="#contacto">
               Hablar con un experto
             </a>
           </div>
@@ -435,7 +435,7 @@
       <!-- ═══════════════════════════════════════
            CLIENTES Y SOCIOS
       ═══════════════════════════════════════ -->
-      <section class="w-full py-16 sm:py-24 bg-surface-container-low dark:bg-[#0d1620] transition-colors duration-200" id="clientes">
+      <section class="w-full py-16 sm:py-24 bg-surface-container-low dark:bg-[#0b1f3a] transition-colors duration-200" id="clientes">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
           <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
             <span class="text-label-lg font-headline text-primary dark:text-sky-300 uppercase tracking-wider mb-2 block font-semibold">Confianza Regional</span>
@@ -451,18 +451,18 @@
           <div class="mb-10 sm:mb-14">
             <p class="text-xs font-semibold uppercase tracking-widest text-on-surface-variant dark:text-slate-500 mb-4 text-center">Clientes</p>
             <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
-              <div class="bg-surface-container-low dark:bg-[#111e29] border border-transparent dark:border-white/10 px-3 py-3 sm:p-4 rounded-xl flex items-center justify-center h-14 sm:h-16 lg:h-20 text-on-surface-variant dark:text-slate-400 hover:text-primary dark:hover:text-sky-300 transition-colors font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/banrural.webp" alt="Banrural" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
-              <div class="bg-surface-container-low dark:bg-[#111e29] border border-transparent dark:border-white/10 px-3 py-3 sm:p-4 rounded-xl flex items-center justify-center h-14 sm:h-16 lg:h-20 text-on-surface-variant dark:text-slate-400 hover:text-primary dark:hover:text-sky-300 transition-colors font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/banco-industrial.webp" alt="Banco Industrial" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
-              <div class="bg-surface-container-low dark:bg-[#111e29] border border-transparent dark:border-white/10 px-3 py-3 sm:p-4 rounded-xl flex items-center justify-center h-14 sm:h-16 lg:h-20 text-on-surface-variant dark:text-slate-400 hover:text-primary dark:hover:text-sky-300 transition-colors font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/visanet.webp" alt="Visanet" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
-              <div class="bg-surface-container-low dark:bg-[#111e29] border border-transparent dark:border-white/10 px-3 py-3 sm:p-4 rounded-xl flex items-center justify-center h-14 sm:h-16 lg:h-20 text-on-surface-variant dark:text-slate-400 hover:text-primary dark:hover:text-sky-300 transition-colors font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/banco-agricola.webp" alt="Banco Agrícola" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
-              <div class="bg-surface-container-low dark:bg-[#111e29] border border-transparent dark:border-white/10 px-3 py-3 sm:p-4 rounded-xl flex items-center justify-center h-14 sm:h-16 lg:h-20 text-on-surface-variant dark:text-slate-400 hover:text-primary dark:hover:text-sky-300 transition-colors font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/bac-credomatic.webp" alt="BAC Credomatic" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
-              <div class="bg-surface-container-low dark:bg-[#111e29] border border-transparent dark:border-white/10 px-3 py-3 sm:p-4 rounded-xl flex items-center justify-center h-14 sm:h-16 lg:h-20 text-on-surface-variant dark:text-slate-400 hover:text-primary dark:hover:text-sky-300 transition-colors font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/davivienda.webp" alt="Davivienda" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
-              <div class="bg-surface-container-low dark:bg-[#111e29] border border-transparent dark:border-white/10 px-3 py-3 sm:p-4 rounded-xl flex items-center justify-center h-14 sm:h-16 lg:h-20 text-on-surface-variant dark:text-slate-400 hover:text-primary dark:hover:text-sky-300 transition-colors font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/ficohsa.webp" alt="Ficohsa" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
-              <div class="bg-surface-container-low dark:bg-[#111e29] border border-transparent dark:border-white/10 px-3 py-3 sm:p-4 rounded-xl flex items-center justify-center h-14 sm:h-16 lg:h-20 text-on-surface-variant dark:text-slate-400 hover:text-primary dark:hover:text-sky-300 transition-colors font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/bantrab.webp" alt="Bantrab" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
-              <div class="bg-surface-container-low dark:bg-[#111e29] border border-transparent dark:border-white/10 px-3 py-3 sm:p-4 rounded-xl flex items-center justify-center h-14 sm:h-16 lg:h-20 text-on-surface-variant dark:text-slate-400 hover:text-primary dark:hover:text-sky-300 transition-colors font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/diunsa.webp" alt="Diunsa" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
-              <div class="bg-surface-container-low dark:bg-[#111e29] border border-transparent dark:border-white/10 px-3 py-3 sm:p-4 rounded-xl flex items-center justify-center h-14 sm:h-16 lg:h-20 text-on-surface-variant dark:text-slate-400 hover:text-primary dark:hover:text-sky-300 transition-colors font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/pantaleon.webp" alt="Pantaleon" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
-              <div class="bg-surface-container-low dark:bg-[#111e29] border border-transparent dark:border-white/10 px-3 py-3 sm:p-4 rounded-xl flex items-center justify-center h-14 sm:h-16 lg:h-20 text-on-surface-variant dark:text-slate-400 hover:text-primary dark:hover:text-sky-300 transition-colors font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/super-selectos.webp" alt="Super Selectos" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
-              <div class="bg-surface-container-low dark:bg-[#111e29] border border-transparent dark:border-white/10 px-3 py-3 sm:p-4 rounded-xl flex items-center justify-center h-14 sm:h-16 lg:h-20 text-on-surface-variant dark:text-slate-400 hover:text-primary dark:hover:text-sky-300 transition-colors font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/tigo.webp" alt="Tigo" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
+              <div class="bg-surface-container-low dark:bg-[#f2f8ff] border border-transparent dark:border-white/10 px-3 py-3 sm:p-4 rounded-xl flex items-center justify-center h-14 sm:h-16 lg:h-20 text-on-surface-variant dark:text-slate-400 hover:text-primary dark:hover:text-sky-300 transition-colors font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/banrural.png" alt="Banrural" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
+              <div class="bg-surface-container-low dark:bg-[#f2f8ff] border border-transparent dark:border-white/10 px-3 py-3 sm:p-4 rounded-xl flex items-center justify-center h-14 sm:h-16 lg:h-20 text-on-surface-variant dark:text-slate-400 hover:text-primary dark:hover:text-sky-300 transition-colors font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/banco-industrial.png" alt="Banco Industrial" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
+              <div class="bg-surface-container-low dark:bg-[#f2f8ff] border border-transparent dark:border-white/10 px-3 py-3 sm:p-4 rounded-xl flex items-center justify-center h-14 sm:h-16 lg:h-20 text-on-surface-variant dark:text-slate-400 hover:text-primary dark:hover:text-sky-300 transition-colors font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/visanet.png" alt="Visanet" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
+              <div class="bg-surface-container-low dark:bg-[#f2f8ff] border border-transparent dark:border-white/10 px-3 py-3 sm:p-4 rounded-xl flex items-center justify-center h-14 sm:h-16 lg:h-20 text-on-surface-variant dark:text-slate-400 hover:text-primary dark:hover:text-sky-300 transition-colors font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/banco-agricola.png" alt="Banco Agrícola" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
+              <div class="bg-surface-container-low dark:bg-[#f2f8ff] border border-transparent dark:border-white/10 px-3 py-3 sm:p-4 rounded-xl flex items-center justify-center h-14 sm:h-16 lg:h-20 text-on-surface-variant dark:text-slate-400 hover:text-primary dark:hover:text-sky-300 transition-colors font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/bac-credomatic.png" alt="BAC Credomatic" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
+              <div class="bg-surface-container-low dark:bg-[#f2f8ff] border border-transparent dark:border-white/10 px-3 py-3 sm:p-4 rounded-xl flex items-center justify-center h-14 sm:h-16 lg:h-20 text-on-surface-variant dark:text-slate-400 hover:text-primary dark:hover:text-sky-300 transition-colors font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/davivienda.png" alt="Davivienda" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
+              <div class="bg-surface-container-low dark:bg-[#f2f8ff] border border-transparent dark:border-white/10 px-3 py-3 sm:p-4 rounded-xl flex items-center justify-center h-14 sm:h-16 lg:h-20 text-on-surface-variant dark:text-slate-400 hover:text-primary dark:hover:text-sky-300 transition-colors font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/ficohsa.png" alt="Ficohsa" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
+              <div class="bg-surface-container-low dark:bg-[#f2f8ff] border border-transparent dark:border-white/10 px-3 py-3 sm:p-4 rounded-xl flex items-center justify-center h-14 sm:h-16 lg:h-20 text-on-surface-variant dark:text-slate-400 hover:text-primary dark:hover:text-sky-300 transition-colors font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/bantrab.png" alt="Bantrab" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
+              <div class="bg-surface-container-low dark:bg-[#f2f8ff] border border-transparent dark:border-white/10 px-3 py-3 sm:p-4 rounded-xl flex items-center justify-center h-14 sm:h-16 lg:h-20 text-on-surface-variant dark:text-slate-400 hover:text-primary dark:hover:text-sky-300 transition-colors font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/diunsa.png" alt="Diunsa" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
+              <div class="bg-surface-container-low dark:bg-[#f2f8ff] border border-transparent dark:border-white/10 px-3 py-3 sm:p-4 rounded-xl flex items-center justify-center h-14 sm:h-16 lg:h-20 text-on-surface-variant dark:text-slate-400 hover:text-primary dark:hover:text-sky-300 transition-colors font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/pantaleon.png" alt="Pantaleon" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
+              <div class="bg-surface-container-low dark:bg-[#f2f8ff] border border-transparent dark:border-white/10 px-3 py-3 sm:p-4 rounded-xl flex items-center justify-center h-14 sm:h-16 lg:h-20 text-on-surface-variant dark:text-slate-400 hover:text-primary dark:hover:text-sky-300 transition-colors font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/super-selectos.png" alt="Super Selectos" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
+              <div class="bg-surface-container-low dark:bg-[#f2f8ff] border border-transparent dark:border-white/10 px-3 py-3 sm:p-4 rounded-xl flex items-center justify-center h-14 sm:h-16 lg:h-20 text-on-surface-variant dark:text-slate-400 hover:text-primary dark:hover:text-sky-300 transition-colors font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/tigo.png" alt="Tigo" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
             </div>
           </div>
 
@@ -470,12 +470,12 @@
           <div class="mb-12">
             <p class="text-xs font-semibold uppercase tracking-widest text-on-surface-variant dark:text-slate-500 mb-4 text-center">Socios tecnológicos</p>
             <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
-              <div class="bg-surface-container-low dark:bg-[#111e29] border border-transparent dark:border-white/10 px-3 py-3 rounded-xl flex items-center justify-center h-14 sm:h-16 text-on-surface-variant dark:text-slate-400 font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/visa.webp" alt="Visa" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
-              <div class="bg-surface-container-low dark:bg-[#111e29] border border-transparent dark:border-white/10 px-3 py-3 rounded-xl flex items-center justify-center h-14 sm:h-16 text-on-surface-variant dark:text-slate-400 font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/mastercard.webp" alt="Mastercard" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
-              <div class="bg-surface-container-low dark:bg-[#111e29] border border-transparent dark:border-white/10 px-3 py-3 rounded-xl flex items-center justify-center h-14 sm:h-16 text-on-surface-variant dark:text-slate-400 font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/entrust.webp" alt="Entrust" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
-              <div class="bg-surface-container-low dark:bg-[#111e29] border border-transparent dark:border-white/10 px-3 py-3 rounded-xl flex items-center justify-center h-14 sm:h-16 text-on-surface-variant dark:text-slate-400 font-headline text-xs font-bold tracking-wider text-center">Thales</div>
-              <div class="bg-surface-container-low dark:bg-[#111e29] border border-transparent dark:border-white/10 px-3 py-3 rounded-xl flex items-center justify-center h-14 sm:h-16 text-on-surface-variant dark:text-slate-400 font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/pax.webp" alt="PAX" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
-              <div class="bg-surface-container-low dark:bg-[#111e29] border border-transparent dark:border-white/10 px-3 py-3 rounded-xl flex items-center justify-center h-14 sm:h-16 text-on-surface-variant dark:text-slate-400 font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/zebra.webp" alt="Zebra" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
+              <div class="bg-surface-container-low dark:bg-[#f2f8ff] border border-transparent dark:border-white/10 px-3 py-3 rounded-xl flex items-center justify-center h-14 sm:h-16 text-on-surface-variant dark:text-slate-400 font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/visa.png" alt="Visa" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
+              <div class="bg-surface-container-low dark:bg-[#f2f8ff] border border-transparent dark:border-white/10 px-3 py-3 rounded-xl flex items-center justify-center h-14 sm:h-16 text-on-surface-variant dark:text-slate-400 font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/mastercard.png" alt="Mastercard" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
+              <div class="bg-surface-container-low dark:bg-[#f2f8ff] border border-transparent dark:border-white/10 px-3 py-3 rounded-xl flex items-center justify-center h-14 sm:h-16 text-on-surface-variant dark:text-slate-400 font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/entrust.png" alt="Entrust" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
+              <div class="bg-surface-container-low dark:bg-[#f2f8ff] border border-transparent dark:border-white/10 px-3 py-3 rounded-xl flex items-center justify-center h-14 sm:h-16 text-on-surface-variant dark:text-slate-400 font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/thales.png" alt="thales"></div>
+              <div class="bg-surface-container-low dark:bg-[#f2f8ff] border border-transparent dark:border-white/10 px-3 py-3 rounded-xl flex items-center justify-center h-14 sm:h-16 text-on-surface-variant dark:text-slate-400 font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/pax.png" alt="PAX" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
+              <div class="bg-surface-container-low dark:bg-[#f2f8ff] border border-transparent dark:border-white/10 px-3 py-3 rounded-xl flex items-center justify-center h-14 sm:h-16 text-on-surface-variant dark:text-slate-400 font-headline text-xs font-bold tracking-wider text-center"><img src="images/landing-page/client-partner/zebra.png" alt="Zebra" class="max-h-10 sm:max-h-12 max-w-full object-contain" loading="lazy" /></div>
             </div>
           </div>
 
@@ -490,27 +490,27 @@
                 Combinamos terminales de última generación con sistemas de procesamiento propios para ofrecer una experiencia sin fricciones en toda la cadena de pagos.
               </p>
               <div class="space-y-3.5">
-                <div class="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-xl bg-surface-container-lowest dark:bg-[#111e29] border border-transparent dark:border-white/10 shadow-sm">
+                <div class="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-xl bg-surface-container-lowest dark:bg-[#102b4e] border border-transparent dark:border-white/10 shadow-sm">
                   <div class="w-8 h-8 rounded-full bg-secondary-container/40 dark:bg-blue-950/80 text-secondary dark:text-sky-200 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <i class="fa-solid fa-check text-[18px]" aria-hidden="true"></i>
+                    <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4 10 4 4 8-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </div>
                   <div>
                     <div class="text-sm sm:text-title-md font-semibold text-on-surface dark:text-white mb-0.5">Plataforma end-to-end</div>
                     <div class="text-xs sm:text-body-md text-on-surface-variant dark:text-slate-300">Desde el hardware hasta el procesamiento en la nube, controlamos toda la cadena.</div>
                   </div>
                 </div>
-                <div class="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-xl bg-surface-container-lowest dark:bg-[#111e29] border border-transparent dark:border-white/10 shadow-sm">
+                <div class="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-xl bg-surface-container-lowest dark:bg-[#102b4e] border border-transparent dark:border-white/10 shadow-sm">
                   <div class="w-8 h-8 rounded-full bg-secondary-container/40 dark:bg-blue-950/80 text-secondary dark:text-sky-200 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <i class="fa-solid fa-check text-[18px]" aria-hidden="true"></i>
+                    <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4 10 4 4 8-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </div>
                   <div>
                     <div class="text-sm sm:text-title-md font-semibold text-on-surface dark:text-white mb-0.5">Certificaciones PCI-DSS y EMV</div>
                     <div class="text-xs sm:text-body-md text-on-surface-variant dark:text-slate-300">Cumplimiento de los más altos estándares de seguridad para la industria financiera.</div>
                   </div>
                 </div>
-                <div class="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-xl bg-surface-container-lowest dark:bg-[#111e29] border border-transparent dark:border-white/10 shadow-sm">
+                <div class="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-xl bg-surface-container-lowest dark:bg-[#102b4e] border border-transparent dark:border-white/10 shadow-sm">
                   <div class="w-8 h-8 rounded-full bg-secondary-container/40 dark:bg-blue-950/80 text-secondary dark:text-sky-200 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <i class="fa-solid fa-check text-[18px]" aria-hidden="true"></i>
+                    <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4 10 4 4 8-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </div>
                   <div>
                     <div class="text-sm sm:text-title-md font-semibold text-on-surface dark:text-white mb-0.5">Soporte técnico 24/7</div>
@@ -520,18 +520,8 @@
               </div>
             </div>
             <div class="lg:col-span-6">
-              <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl h-[280px] sm:h-[360px] lg:h-[440px] bg-gradient-to-br from-primary dark:from-blue-900 to-primary-container dark:to-blue-950 border border-transparent dark:border-white/10 flex items-center justify-center">
-                <div class="absolute inset-0 opacity-10">
-                  <div class="grid grid-cols-6 gap-4 p-6 h-full">
-                    <div class="bg-white rounded"></div><div class="bg-white rounded"></div><div class="bg-white rounded"></div><div class="bg-white rounded"></div><div class="bg-white rounded"></div><div class="bg-white rounded"></div>
-                    <div class="bg-white rounded"></div><div class="bg-white rounded"></div><div class="bg-white rounded"></div><div class="bg-white rounded"></div><div class="bg-white rounded"></div><div class="bg-white rounded"></div>
-                  </div>
-                </div>
-                <div class="relative z-10 text-center px-8">
-                  <i class="fa-solid fa-globe text-[64px] text-white/60 mb-4 block" aria-hidden="true"></i>
-                  <div class="text-lg sm:text-xl font-bold font-headline text-white mb-2">Cobertura Centroamericana</div>
-                  <p class="text-sm text-white/70">Guatemala · Honduras · El Salvador · Nicaragua · Costa Rica · Panamá · México</p>
-                </div>
+              <div class="relative w-full aspect-[660/506] rounded-2xl sm:rounded-3xl overflow-hidden">
+                <img src="images/mapa.gif" alt="Mapa animado de cobertura centroamericana" class="block w-full h-full object-contain" />
               </div>
             </div>
           </div>
@@ -541,7 +531,7 @@
       <!-- ═══════════════════════════════════════
            PREGUNTAS FRECUENTES
       ═══════════════════════════════════════ -->
-      <section class="w-full py-16 sm:py-24 bg-surface dark:bg-[#0a1118] transition-colors duration-200" id="faq">
+      <section class="w-full py-16 sm:py-24 bg-surface dark:bg-[#071a33] transition-colors duration-200" id="faq">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-12">
           <div class="text-center mb-10 sm:mb-16">
             <span class="text-label-lg font-headline text-primary dark:text-sky-300 uppercase tracking-wider mb-2 block font-semibold">Preguntas Frecuentes</span>
@@ -553,7 +543,7 @@
             </p>
           </div>
           <div class="space-y-3.5 sm:space-y-4">
-            <details class="group bg-surface-container-low dark:bg-[#111e29] border border-transparent dark:border-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-6 transition-all duration-200">
+            <details class="group bg-surface-container-low dark:bg-[#102b4e] border border-transparent dark:border-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-6 transition-all duration-200">
               <summary class="flex items-center justify-between gap-4 font-headline text-base sm:text-title-lg font-semibold text-on-surface dark:text-white cursor-pointer list-none select-none">
                 <span>¿En qué países tienen presencia?</span>
                 <i class="fa-solid fa-chevron-down transition-transform duration-300 group-open:rotate-180 flex-shrink-0 text-primary dark:text-sky-300" aria-hidden="true"></i>
@@ -562,7 +552,7 @@
                 Tenemos operaciones activas en Guatemala, Honduras, El Salvador, Nicaragua, Costa Rica, Panamá y México. Nuestros equipos locales garantizan soporte y atención personalizada en cada mercado.
               </p>
             </details>
-            <details class="group bg-surface-container-low dark:bg-[#111e29] border border-transparent dark:border-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-6 transition-all duration-200">
+            <details class="group bg-surface-container-low dark:bg-[#102b4e] border border-transparent dark:border-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-6 transition-all duration-200">
               <summary class="flex items-center justify-between gap-4 font-headline text-base sm:text-title-lg font-semibold text-on-surface dark:text-white cursor-pointer list-none select-none">
                 <span>¿Sus terminales POS son compatibles con cualquier banco?</span>
                 <i class="fa-solid fa-chevron-down transition-transform duration-300 group-open:rotate-180 flex-shrink-0 text-primary dark:text-sky-300" aria-hidden="true"></i>
@@ -571,7 +561,7 @@
                 Sí. Nuestros terminales cuentan con certificación EMV y PCI-DSS, y están homologados con los principales procesadores y redes de pago de la región. Trabajamos con Visa, Mastercard, y las principales redes locales de Centroamérica.
               </p>
             </details>
-            <details class="group bg-surface-container-low dark:bg-[#111e29] border border-transparent dark:border-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-6 transition-all duration-200">
+            <details class="group bg-surface-container-low dark:bg-[#102b4e] border border-transparent dark:border-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-6 transition-all duration-200">
               <summary class="flex items-center justify-between gap-4 font-headline text-base sm:text-title-lg font-semibold text-on-surface dark:text-white cursor-pointer list-none select-none">
                 <span>¿Qué incluye el servicio de soporte técnico?</span>
                 <i class="fa-solid fa-chevron-down transition-transform duration-300 group-open:rotate-180 flex-shrink-0 text-primary dark:text-sky-300" aria-hidden="true"></i>
@@ -580,7 +570,7 @@
                 Ofrecemos soporte técnico 24/7 con atención telefónica, remota y en sitio según el nivel de contrato. Incluye mantenimiento preventivo de terminales, actualizaciones de firmware y gestión del TMS (Terminal Management System).
               </p>
             </details>
-            <details class="group bg-surface-container-low dark:bg-[#111e29] border border-transparent dark:border-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-6 transition-all duration-200">
+            <details class="group bg-surface-container-low dark:bg-[#102b4e] border border-transparent dark:border-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-6 transition-all duration-200">
               <summary class="flex items-center justify-between gap-4 font-headline text-base sm:text-title-lg font-semibold text-on-surface dark:text-white cursor-pointer list-none select-none">
                 <span>¿Pueden adaptar las soluciones a las necesidades específicas de mi organización?</span>
                 <i class="fa-solid fa-chevron-down transition-transform duration-300 group-open:rotate-180 flex-shrink-0 text-primary dark:text-sky-300" aria-hidden="true"></i>
@@ -589,7 +579,7 @@
                 Absolutamente. Nuestra arquitectura modular permite personalizar desde la interfaz de los terminales hasta los flujos de procesamiento y los reportes de business intelligence. Contamos con un equipo de desarrollo dedicado a integraciones especiales.
               </p>
             </details>
-            <details class="group bg-surface-container-low dark:bg-[#111e29] border border-transparent dark:border-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-6 transition-all duration-200">
+            <details class="group bg-surface-container-low dark:bg-[#102b4e] border border-transparent dark:border-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-6 transition-all duration-200">
               <summary class="flex items-center justify-between gap-4 font-headline text-base sm:text-title-lg font-semibold text-on-surface dark:text-white cursor-pointer list-none select-none">
                 <span>¿Ofrecen soluciones para pequeñas y medianas empresas?</span>
                 <i class="fa-solid fa-chevron-down transition-transform duration-300 group-open:rotate-180 flex-shrink-0 text-primary dark:text-sky-300" aria-hidden="true"></i>
@@ -608,7 +598,7 @@
       
 <section
   id="contacto"
-  class="w-full py-16 sm:py-24 bg-surface-container-low dark:bg-[#0d1620] transition-colors duration-200 relative overflow-hidden"
+  class="w-full py-16 sm:py-24 bg-surface-container-low dark:bg-[#0b1f3a] transition-colors duration-200 relative overflow-hidden"
 >
   <img
     src="images/landing-page/contact-us/worldwide.webp"
@@ -622,7 +612,7 @@
 
       <!-- Columna izquierda: formulario -->
       <div class="lg:col-span-7 min-w-0">
-        <div class="bg-surface-container-lowest dark:bg-[#111e29] rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-10 shadow-xl border border-surface-container-high dark:border-white/10 transition-colors duration-200">
+        <div class="bg-surface-container-lowest dark:bg-[#102b4e] rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-10 shadow-xl border border-surface-container-high dark:border-white/10 transition-colors duration-200">
 
           <div class="mb-8">
             <h2 class="text-2xl sm:text-3xl lg:text-[36px] lg:leading-[44px] font-bold font-headline text-on-surface dark:text-white mb-3">
@@ -648,7 +638,7 @@
                   autocomplete="name"
                   placeholder="Ej. Juan García"
                   required
-                  class="w-full min-w-0 px-4 py-3 rounded-xl bg-surface-container-low dark:bg-[#0d1620] border border-outline-variant/50 dark:border-white/15 focus:border-primary dark:focus:border-blue-400 focus:ring-2 focus:ring-primary/20 dark:focus:ring-blue-400/20 focus:outline-none transition-colors text-sm text-on-surface dark:text-white placeholder:text-outline/70 dark:placeholder:text-slate-500"
+                  class="w-full min-w-0 px-4 py-3 rounded-xl bg-surface-container-low dark:bg-[#0b1f3a] border border-outline-variant/50 dark:border-white/15 focus:border-primary dark:focus:border-blue-400 focus:ring-2 focus:ring-primary/20 dark:focus:ring-blue-400/20 focus:outline-none transition-colors text-sm text-on-surface dark:text-white placeholder:text-outline/70 dark:placeholder:text-slate-500"
                 />
               </div>
 
@@ -663,7 +653,7 @@
                   autocomplete="email"
                   placeholder="juan.garcia@empresa.com"
                   required
-                  class="w-full min-w-0 px-4 py-3 rounded-xl bg-surface-container-low dark:bg-[#0d1620] border border-outline-variant/50 dark:border-white/15 focus:border-primary dark:focus:border-blue-400 focus:ring-2 focus:ring-primary/20 dark:focus:ring-blue-400/20 focus:outline-none transition-colors text-sm text-on-surface dark:text-white placeholder:text-outline/70 dark:placeholder:text-slate-500"
+                  class="w-full min-w-0 px-4 py-3 rounded-xl bg-surface-container-low dark:bg-[#0b1f3a] border border-outline-variant/50 dark:border-white/15 focus:border-primary dark:focus:border-blue-400 focus:ring-2 focus:ring-primary/20 dark:focus:ring-blue-400/20 focus:outline-none transition-colors text-sm text-on-surface dark:text-white placeholder:text-outline/70 dark:placeholder:text-slate-500"
                 />
               </div>
 
@@ -678,7 +668,7 @@
                   autocomplete="organization"
                   placeholder="Nombre de su organización"
                   required
-                  class="w-full min-w-0 px-4 py-3 rounded-xl bg-surface-container-low dark:bg-[#0d1620] border border-outline-variant/50 dark:border-white/15 focus:border-primary dark:focus:border-blue-400 focus:ring-2 focus:ring-primary/20 dark:focus:ring-blue-400/20 focus:outline-none transition-colors text-sm text-on-surface dark:text-white placeholder:text-outline/70 dark:placeholder:text-slate-500"
+                  class="w-full min-w-0 px-4 py-3 rounded-xl bg-surface-container-low dark:bg-[#0b1f3a] border border-outline-variant/50 dark:border-white/15 focus:border-primary dark:focus:border-blue-400 focus:ring-2 focus:ring-primary/20 dark:focus:ring-blue-400/20 focus:outline-none transition-colors text-sm text-on-surface dark:text-white placeholder:text-outline/70 dark:placeholder:text-slate-500"
                 />
               </div>
 
@@ -692,7 +682,7 @@
                   type="tel"
                   autocomplete="tel"
                   placeholder="+502 1234-5678"
-                  class="w-full min-w-0 px-4 py-3 rounded-xl bg-surface-container-low dark:bg-[#0d1620] border border-outline-variant/50 dark:border-white/15 focus:border-primary dark:focus:border-blue-400 focus:ring-2 focus:ring-primary/20 dark:focus:ring-blue-400/20 focus:outline-none transition-colors text-sm text-on-surface dark:text-white placeholder:text-outline/70 dark:placeholder:text-slate-500"
+                  class="w-full min-w-0 px-4 py-3 rounded-xl bg-surface-container-low dark:bg-[#0b1f3a] border border-outline-variant/50 dark:border-white/15 focus:border-primary dark:focus:border-blue-400 focus:ring-2 focus:ring-primary/20 dark:focus:ring-blue-400/20 focus:outline-none transition-colors text-sm text-on-surface dark:text-white placeholder:text-outline/70 dark:placeholder:text-slate-500"
                 />
               </div>
             </div>
@@ -704,7 +694,7 @@
               <select
                 id="cf-country"
                 name="country"
-                class="w-full min-w-0 px-4 py-3 rounded-xl bg-surface-container-low dark:bg-[#0d1620] border border-outline-variant/50 dark:border-white/15 focus:border-primary dark:focus:border-blue-400 focus:ring-2 focus:ring-primary/20 dark:focus:ring-blue-400/20 focus:outline-none transition-colors text-sm text-on-surface dark:text-white"
+                class="w-full min-w-0 px-4 py-3 rounded-xl bg-surface-container-low dark:bg-[#0b1f3a] border border-outline-variant/50 dark:border-white/15 focus:border-primary dark:focus:border-blue-400 focus:ring-2 focus:ring-primary/20 dark:focus:ring-blue-400/20 focus:outline-none transition-colors text-sm text-on-surface dark:text-white"
               >
                 <option value="">Seleccione su país</option>
                 <option value="Guatemala">Guatemala</option>
@@ -727,7 +717,7 @@
                 name="message"
                 placeholder="Describa brevemente el proyecto o solución que necesita..."
                 rows="4"
-                class="w-full min-w-0 px-4 py-3 rounded-xl bg-surface-container-low dark:bg-[#0d1620] border border-outline-variant/50 dark:border-white/15 focus:border-primary dark:focus:border-blue-400 focus:ring-2 focus:ring-primary/20 dark:focus:ring-blue-400/20 focus:outline-none transition-colors text-sm text-on-surface dark:text-white placeholder:text-outline/70 dark:placeholder:text-slate-500 resize-y"
+                class="w-full min-w-0 px-4 py-3 rounded-xl bg-surface-container-low dark:bg-[#0b1f3a] border border-outline-variant/50 dark:border-white/15 focus:border-primary dark:focus:border-blue-400 focus:ring-2 focus:ring-primary/20 dark:focus:ring-blue-400/20 focus:outline-none transition-colors text-sm text-on-surface dark:text-white placeholder:text-outline/70 dark:placeholder:text-slate-500 resize-y"
               ></textarea>
             </div>
 
@@ -753,7 +743,7 @@
 
             <button
               type="submit"
-              class="w-full py-3.5 sm:py-4 px-4 bg-primary dark:bg-blue-600 text-on-primary rounded-xl font-headline text-base font-bold hover:bg-primary-container dark:hover:bg-blue-500 transition-all shadow-md active:scale-[0.99] cursor-pointer"
+              class="w-full py-3.5 sm:py-4 px-4 bg-primary dark:bg-primary text-on-primary rounded-xl font-headline text-base font-bold hover:bg-primary-container dark:hover:bg-primary-container transition-all shadow-md active:scale-[0.99] cursor-pointer"
             >
               Enviar solicitud
             </button>
@@ -781,18 +771,18 @@
         </div>
 
         <!-- Guatemala -->
-        <article class="rounded-2xl p-5 sm:p-6 bg-surface-container-lowest dark:bg-[#111e29] border border-surface-container-high dark:border-white/10 shadow-sm transition-colors duration-200">
+        <article class="rounded-2xl p-5 sm:p-6 bg-surface-container-lowest dark:bg-[#102b4e] border border-surface-container-high dark:border-white/10 shadow-sm transition-colors duration-200">
           <!-- País y teléfono en la misma fila -->
           <div class="flex items-center justify-between gap-3 mb-5">
             <div class="flex items-center gap-3 min-w-0">
-              <div class="flex items-center justify-center w-11 h-11 rounded-xl bg-primary/10 dark:bg-blue-500/15 text-primary dark:text-sky-300 shrink-0">
+              <div class="flex items-center justify-center w-11 h-11 rounded-xl bg-primary/10 dark:bg-primary/15 text-primary dark:text-sky-300 shrink-0">
               <a
                 href="https://waze.com/ul?ll=14.58217353%2C-90.49444914&navigate=yes"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Ver ubicación de Guatemala en Waze"
                 title="Cómo llegar con Waze"
-                class="flex items-center justify-center w-11 h-11 rounded-xl bg-primary/10 dark:bg-blue-500/15 hover:bg-primary/20 dark:hover:bg-blue-500/25 transition-colors shrink-0"
+                class="flex items-center justify-center w-11 h-11 rounded-xl bg-primary/10 dark:bg-primary/15 hover:bg-primary/20 dark:hover:bg-primary-container/25 transition-colors shrink-0"
               >
                 <img
                   src="https://cdn.simpleicons.org/waze/33CCFF"
@@ -828,18 +818,18 @@
           </div>
         </article>  
         <!-- El Salvador -->
-        <article class="rounded-2xl p-5 sm:p-6 bg-surface-container-lowest dark:bg-[#111e29] border border-surface-container-high dark:border-white/10 shadow-sm transition-colors duration-200">
+        <article class="rounded-2xl p-5 sm:p-6 bg-surface-container-lowest dark:bg-[#102b4e] border border-surface-container-high dark:border-white/10 shadow-sm transition-colors duration-200">
           <!-- País y teléfono -->
           <div class="flex items-center justify-between gap-3 mb-5">
             <div class="flex items-center gap-3 min-w-0">
-              <div class="flex items-center justify-center w-11 h-11 rounded-xl bg-primary/10 dark:bg-blue-500/15 text-primary dark:text-sky-300 shrink-0">
+              <div class="flex items-center justify-center w-11 h-11 rounded-xl bg-primary/10 dark:bg-primary/15 text-primary dark:text-sky-300 shrink-0">
               <a
                 href="https://ul.waze.com/ul?venue_id=177406089.1774257495.425106&overview=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Ver ubicación de El Salvador en Waze"
                 title="Cómo llegar con Waze"
-                class="flex items-center justify-center w-11 h-11 rounded-xl bg-primary/10 dark:bg-blue-500/15 hover:bg-primary/20 dark:hover:bg-blue-500/25 transition-colors shrink-0"
+                class="flex items-center justify-center w-11 h-11 rounded-xl bg-primary/10 dark:bg-primary/15 hover:bg-primary/20 dark:hover:bg-primary-container/25 transition-colors shrink-0"
               >
                 <img
                   src="https://cdn.simpleicons.org/waze/33CCFF"
@@ -875,18 +865,18 @@
           </div>
         </article>
         <!-- Honduras -->
-        <article class="rounded-2xl p-5 sm:p-6 bg-surface-container-lowest dark:bg-[#111e29] border border-surface-container-high dark:border-white/10 shadow-sm transition-colors duration-200">
+        <article class="rounded-2xl p-5 sm:p-6 bg-surface-container-lowest dark:bg-[#102b4e] border border-surface-container-high dark:border-white/10 shadow-sm transition-colors duration-200">
           <!-- País y teléfono -->
           <div class="flex items-center justify-between gap-3 mb-5">
             <div class="flex items-center gap-3 min-w-0">
-              <div class="flex items-center justify-center w-11 h-11 rounded-xl bg-primary/10 dark:bg-blue-500/15 text-primary dark:text-sky-300 shrink-0">
+              <div class="flex items-center justify-center w-11 h-11 rounded-xl bg-primary/10 dark:bg-primary/15 text-primary dark:text-sky-300 shrink-0">
               <a
                 href="https://ul.waze.com/ul?venue_id=178782349.1787954562.441463&overview=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Ver ubicación de Honduras en Waze"
                 title="Cómo llegar con Waze"
-                class="flex items-center justify-center w-11 h-11 rounded-xl bg-primary/10 dark:bg-blue-500/15 hover:bg-primary/20 dark:hover:bg-blue-500/25 transition-colors shrink-0"
+                class="flex items-center justify-center w-11 h-11 rounded-xl bg-primary/10 dark:bg-primary/15 hover:bg-primary/20 dark:hover:bg-primary-container/25 transition-colors shrink-0"
               >
                 <img
                   src="https://cdn.simpleicons.org/waze/33CCFF"
@@ -933,7 +923,7 @@
   <!-- ═══════════════════════════════════════
        FOOTER
   ═══════════════════════════════════════ -->
-  <footer class="w-full bg-surface-container-low dark:bg-[#080d14] border-t border-transparent dark:border-white/10 py-12 sm:py-space-xl transition-colors duration-200">
+  <footer class="w-full bg-surface-container-low dark:bg-[#061429] border-t border-transparent dark:border-white/10 py-12 sm:py-space-xl transition-colors duration-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 lg:gap-space-xl mb-8 sm:mb-space-xl">
       <!-- Brand -->
       <div class="flex flex-col gap-4 sm:col-span-2 md:col-span-1">

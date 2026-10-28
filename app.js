@@ -225,19 +225,19 @@
 
       desktopNavLinks.forEach((link) => {
         if (link.getAttribute('data-path') === currentId) {
-          link.classList.add('bg-primary', 'dark:bg-emerald-600', 'text-on-primary', 'font-semibold');
+          link.classList.add('bg-primary', 'dark:bg-[#2c37c7]', 'text-on-primary', 'font-semibold');
           link.classList.remove('text-on-surface-variant', 'dark:text-slate-300');
         } else {
-          link.classList.remove('bg-primary', 'dark:bg-emerald-600', 'text-on-primary', 'font-semibold');
+          link.classList.remove('bg-primary', 'dark:bg-[#2c37c7]', 'text-on-primary', 'font-semibold');
           link.classList.add('text-on-surface-variant', 'dark:text-slate-300');
         }
       });
 
       mobileNavLinks.forEach((link) => {
         if (link.getAttribute('data-path') === currentId) {
-          link.classList.add('bg-primary/10', 'dark:bg-emerald-950/50', 'text-primary', 'dark:text-emerald-400', 'font-bold');
+          link.classList.add('bg-primary/10', 'dark:bg-[#2c37c7]', 'text-primary', 'dark:text-white', 'font-bold');
         } else {
-          link.classList.remove('bg-primary/10', 'dark:bg-emerald-950/50', 'text-primary', 'dark:text-emerald-400', 'font-bold');
+          link.classList.remove('bg-primary/10', 'dark:bg-[#2c37c7]', 'text-primary', 'dark:text-white', 'font-bold');
         }
       });
     };
