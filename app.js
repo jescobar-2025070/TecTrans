@@ -55,6 +55,17 @@
   };
 
   onReady(() => {
+    // Rotate the hero background images.
+    const heroBackgrounds = Array.from(document.querySelectorAll("#inicio .hero-background"));
+    if (heroBackgrounds.length > 1 && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      let activeHeroBackground = 0;
+      window.setInterval(() => {
+        heroBackgrounds[activeHeroBackground].classList.remove("is-active");
+        activeHeroBackground = (activeHeroBackground + 1) % heroBackgrounds.length;
+        heroBackgrounds[activeHeroBackground].classList.add("is-active");
+      }, 6000);
+    }
+
     // Sync theme state on load
     applyTheme(getPreferredTheme());
 
@@ -71,22 +82,71 @@
     });
 
     // ─────────────────────────────────────────────────────────────────
-        // Services shown in normal document flow
+    // Automatically rotating, centered solutions carousel
     const servicesSection = document.querySelector('.services-scroll-section');
-    const servicesTrack = servicesSection?.querySelector('.services-track');
+    const servicesDeck = servicesSection?.querySelector('#services-deck');
+    const servicesTrack = servicesDeck?.querySelector('.services-track');
     const serviceCards = servicesTrack ? Array.from(servicesTrack.querySelectorAll('.service-card')) : [];
-    if (servicesSection && servicesTrack && serviceCards.length) {
-      servicesSection.style.height = 'auto';
-      servicesSection.classList.add('services-static');
-      servicesTrack.style.transform = '';
-      serviceCards.forEach((card) => {
-        card.style.transform = '';
-        card.style.opacity = '';
-        card.style.zIndex = '';
-        card.style.pointerEvents = '';
-        card.setAttribute('aria-hidden', 'false');
+    const previousServiceButton = document.getElementById('services-previous');
+    const nextServiceButton = document.getElementById('services-next');
+    const autoplayServiceButton = document.getElementById('services-autoplay');
+    const serviceCounter = document.getElementById('services-counter');
+    let activeServiceIndex = 0;
+    let serviceAutoplayTimer = null;
+    let serviceAutoplayPaused = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const showServiceCard = (index) => {
+      if (!serviceCards.length) return;
+      activeServiceIndex = (index + serviceCards.length) % serviceCards.length;
+      serviceCards.forEach((card, cardIndex) => {
+        const isActive = cardIndex === activeServiceIndex;
+        card.classList.toggle('is-active', isActive);
+        card.setAttribute('aria-hidden', String(!isActive));
+        card.inert = !isActive;
+      });
+      if (serviceCounter) serviceCounter.textContent = `${activeServiceIndex + 1} / ${serviceCards.length}`;
+    };
+
+    const stopServiceAutoplay = () => {
+      if (serviceAutoplayTimer !== null) window.clearInterval(serviceAutoplayTimer);
+      serviceAutoplayTimer = null;
+    };
+
+    const startServiceAutoplay = () => {
+      stopServiceAutoplay();
+      if (serviceAutoplayPaused || serviceCards.length < 2) return;
+      serviceAutoplayTimer = window.setInterval(() => showServiceCard(activeServiceIndex + 1), 8000);
+    };
+
+    const syncAutoplayButton = () => {
+      if (!autoplayServiceButton) return;
+      autoplayServiceButton.setAttribute('aria-pressed', String(serviceAutoplayPaused));
+      autoplayServiceButton.setAttribute('aria-label', serviceAutoplayPaused ? 'Reanudar reproducción automática' : 'Pausar reproducción automática');
+    };
+
+    if (servicesSection && servicesDeck && servicesTrack && serviceCards.length) {
+      showServiceCard(0);
+      syncAutoplayButton();
+      startServiceAutoplay();
+      previousServiceButton?.addEventListener('click', () => {
+        showServiceCard(activeServiceIndex - 1);
+        startServiceAutoplay();
+      });
+      nextServiceButton?.addEventListener('click', () => {
+        showServiceCard(activeServiceIndex + 1);
+        startServiceAutoplay();
+      });
+      autoplayServiceButton?.addEventListener('click', () => {
+        serviceAutoplayPaused = !serviceAutoplayPaused;
+        syncAutoplayButton();
+        startServiceAutoplay();
+      });
+      servicesDeck.addEventListener('focusin', stopServiceAutoplay);
+      servicesDeck.addEventListener('focusout', (event) => {
+        if (!servicesDeck.contains(event.relatedTarget)) startServiceAutoplay();
       });
     }
+
     // Mobile Navigation Controls
     // ─────────────────────────────────────────────────────────────────
     const mobileNavDetails = document.querySelectorAll('.mobile-navigation');

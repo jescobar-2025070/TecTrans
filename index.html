@@ -100,8 +100,10 @@
            HERO / INICIO
       ═══════════════════════════════════════ -->
       <section class="relative w-full overflow-hidden bg-surface dark:bg-[#0a1118] py-16 sm:py-24 lg:py-32 transition-colors duration-200" id="inicio">
-        <img src="images/landing-page/carousel/banner-one.webp" alt="" class="absolute inset-0 z-0 h-full w-full object-cover opacity-[0.12] dark:opacity-[0.16] pointer-events-none" />
-        <div class="absolute inset-0 z-0 bg-gradient-to-r from-white/90 via-white/85 to-[#e8f2ff]/80 dark:from-[#0a1118]/90 dark:via-[#0a1118]/85 dark:to-[#0a1118]/75 pointer-events-none"></div>
+        <img src="images/landing-page/carousel/banner-one.webp" alt="" class="hero-background is-active absolute inset-0 z-0 h-full w-full object-cover pointer-events-none" aria-hidden="true" />
+        <img src="images/landing-page/carousel/banner-two.webp" alt="" class="hero-background absolute inset-0 z-0 h-full w-full object-cover pointer-events-none" aria-hidden="true" />
+        <img src="images/landing-page/carousel/banner-three.webp" alt="" class="hero-background absolute inset-0 z-0 h-full w-full object-cover pointer-events-none" aria-hidden="true" />
+        <div class="absolute inset-0 z-0 bg-gradient-to-r from-white/50 via-white/45 to-[#e8f2ff]/40 dark:from-[#0a1118]/50 dark:via-[#0a1118]/45 dark:to-[#0a1118]/40 pointer-events-none"></div>
         <!-- decorative blobs -->
         <div class="absolute -top-40 -right-40 w-96 h-96 bg-primary/10 dark:bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
         <div class="absolute top-1/2 -left-20 w-80 h-80 bg-secondary/10 dark:bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -245,7 +247,7 @@
         <img src="images/landing-page/solution/blue-circle.webp" alt="" class="absolute z-0 -top-12 -right-16 w-44 sm:w-64 opacity-10 pointer-events-none" />
         <img src="images/landing-page/solution/yellow-tube.webp" alt="" class="absolute z-0 bottom-10 -left-8 w-28 sm:w-40 opacity-35 pointer-events-none" />
         <img src="images/landing-page/solution/blue-tube.webp" alt="" class="absolute z-0 top-1/2 right-0 w-24 opacity-30 pointer-events-none" />
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 services-sticky-stage relative z-10">
+        <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 services-sticky-stage relative z-10">
           <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-14 gap-4 sm:gap-6">
             <div>
               <span class="text-label-lg font-headline text-primary dark:text-sky-300 uppercase tracking-wider mb-2 block font-semibold">Nuestras Soluciones</span>
@@ -253,11 +255,11 @@
             </div>
           </div>
 
-          <div class="services-deck relative max-w-4xl mx-auto w-full" id="services-deck">
+          <div class="services-deck" id="services-deck" role="region" aria-label="Carrusel de soluciones" aria-roledescription="carrusel" aria-live="off">
             <div class="services-track">
 
             <!-- Card 1: Medios de Pago -->
-            <article aria-hidden="false" class="service-card bg-surface-container-lowest dark:bg-[#111e29] rounded-2xl sm:rounded-3xl p-5 sm:p-7 lg:p-8 shadow-xl transition-all duration-300 flex flex-col justify-between border border-surface-container-highest dark:border-white/10" style="--card-index: 0;">
+            <article aria-hidden="false" class="service-card is-active bg-surface-container-lowest dark:bg-[#111e29] rounded-2xl sm:rounded-3xl p-5 sm:p-7 lg:p-8 shadow-xl transition-all duration-300 flex flex-col justify-between border border-surface-container-highest dark:border-white/10" style="--card-index: 0;">
               <div>
                 <img src="images/landing-page/solution/solutions-medios%20de%20pago.webp" alt="Soluciones de medios de pago" class="w-full h-12 sm:h-14 object-cover rounded-xl mb-3" loading="lazy" />
                 <h3 class="text-xl sm:text-2xl lg:text-headline-lg font-bold font-headline text-on-surface dark:text-white mb-3 sm:mb-4">Medios de Pago</h3>
@@ -327,6 +329,19 @@
 
           </div><!-- /services-track -->
           </div><!-- /services-deck -->
+          <div class="services-carousel-controls" role="group" aria-label="Controles del carrusel de soluciones">
+            <button id="services-previous" class="services-carousel-button" type="button" aria-label="Mostrar solución anterior">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <span id="services-counter" class="services-carousel-counter" aria-live="polite" aria-atomic="true">1 / 3</span>
+            <button id="services-autoplay" class="services-carousel-button" type="button" aria-label="Pausar reproducción automática" aria-pressed="false">
+              <svg class="services-pause-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M7 5h4v14H7zm6 0h4v14h-4z"/></svg>
+              <svg class="services-play-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg>
+            </button>
+            <button id="services-next" class="services-carousel-button" type="button" aria-label="Mostrar solución siguiente">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+          </div>
         </div>
       </section>
 

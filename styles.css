@@ -283,3 +283,188 @@ select {
 /* Theme toggle icons are inline SVGs, independent of the icon font. */.theme-icon-dark { display: none; }
 html.dark .theme-icon-light { display: none; }
 html.dark .theme-icon-dark { display: block; }
+
+
+/* Full-height responsive hero below the fixed header */
+#inicio {
+  min-height: calc(100vh - 4rem);
+  min-height: calc(100svh - 4rem);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+#inicio > .max-w-7xl { width: 100%; }
+/* Crossfading hero backgrounds */
+.hero-background { opacity: 0; transition: opacity 1.2s ease-in-out; }
+.hero-background.is-active { opacity: 0.90; }
+html.dark .hero-background.is-active { opacity: 0.80; }
+@media (prefers-reduced-motion: reduce) { .hero-background { transition: none; } }
+
+/* Centered auto-rotating solutions carousel */
+.services-scroll-section {
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 4rem 0 !important;
+}
+.services-sticky-stage {
+  position: static !important;
+  top: auto !important;
+  min-height: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+.services-deck {
+  width: 100%;
+  max-width: 1240px;
+  height: auto;
+  overflow: visible;
+  margin-inline: auto;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+}
+.services-track {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr);
+  width: 100%;
+  height: auto;
+  gap: 0;
+  transform: none !important;
+}
+.services-track > .service-card {
+  grid-area: 1 / 1;
+  flex: none !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  opacity: 0 !important;
+  transform: translateY(0.75rem) scale(0.985) !important;
+  transition: opacity 0.45s ease, transform 0.45s ease !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+}
+.services-track > .service-card.is-active {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+  pointer-events: auto !important;
+  z-index: 1 !important;
+}
+.services-carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem auto 0;
+}
+.services-carousel-button {
+  display: inline-flex;
+  width: 2.75rem;
+  height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(8, 112, 243, 0.22);
+  border-radius: 9999px;
+  background: #0870f3;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.services-carousel-button:hover { transform: scale(1.06); background: #2c37c7; }
+.services-carousel-button:active { transform: scale(0.96); }
+.services-carousel-button:focus-visible { outline: 3px solid #52b6f3; outline-offset: 3px; }
+html.dark .services-carousel-button { background: #2563eb; border-color: rgba(147, 197, 253, 0.3); }
+html.dark .services-carousel-button:hover { background: #3b82f6; }
+.services-carousel-counter {
+  min-width: 3.5rem;
+  text-align: center;
+  color: #45566b;
+  font-size: 0.875rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+html.dark .services-carousel-counter { color: #cbd5e1; }
+.services-play-icon { display: none; }
+.services-carousel-button[aria-pressed="true"] .services-pause-icon { display: none; }
+.services-carousel-button[aria-pressed="true"] .services-play-icon { display: block; }
+@media (max-width: 1023px) {
+  .services-scroll-section { padding: 3rem 0 !important; }
+  .services-deck { max-width: 100%; }
+  .services-carousel-controls { margin-top: 1.25rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .services-track > .service-card,
+  .services-carousel-button { transition: none !important; }
+}
+/* Compact solution cards with a square image on the right */
+.services-track > .service-card {
+  container-type: inline-size;
+  container-name: solution-card;
+  padding: clamp(0.875rem, 2cqw, 1.5rem) !important;
+}
+.services-track > .service-card > div:first-child {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(13rem, clamp(13rem, 22vw, 17.5rem));
+  grid-template-rows: auto auto auto;
+  column-gap: clamp(1rem, 2.5vw, 2rem);
+  row-gap: 0.5rem;
+  align-content: start;
+}
+.services-track > .service-card > div:first-child > img {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  width: 100%;
+  height: auto !important;
+  min-height: 0;
+  aspect-ratio: 1 / 1;
+  margin: 0;
+  object-fit: cover;
+  align-self: center;
+}
+.services-track > .service-card > div:first-child > h3,
+.services-track > .service-card > div:first-child > p,
+.services-track > .service-card > div:first-child > div {
+  grid-column: 1;
+  min-width: 0;
+}
+.services-track > .service-card > div:last-child {
+  margin-top: 1rem !important;
+  padding-top: 1rem !important;
+}
+@media (max-width: 1023px) {
+  .services-track > .service-card > div:first-child {
+    grid-template-columns: minmax(0, 1fr) minmax(5.5rem, 32%);
+    column-gap: 0.875rem;
+  }
+}
+@media (max-width: 480px) {
+  .services-track > .service-card > div:first-child {
+    grid-template-columns: minmax(0, 1fr) minmax(4.75rem, 28%);
+    column-gap: 0.75rem;
+  }
+}
+/* Adapt card internals to each card's own width */
+@container solution-card (max-width: 560px) {
+  .services-track > .service-card > div:first-child {
+    grid-template-columns: minmax(0, 1fr) minmax(5rem, 30%);
+    column-gap: 0.75rem;
+  }
+  .services-track > .service-card > div:first-child > div.grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+  .services-track > .service-card > div:first-child > h3 {
+    font-size: clamp(1.05rem, 5cqw, 1.5rem) !important;
+  }
+  .services-track > .service-card > div:first-child > p {
+    font-size: clamp(0.8rem, 3.3cqw, 1rem) !important;
+  }
+  .services-track > .service-card > div:first-child > div.grid > div {
+    font-size: clamp(0.7rem, 2.8cqw, 0.8rem) !important;
+  }
+  .services-track > .service-card > div:last-child {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .services-track > .service-card > div:last-child > a {
+    width: 100%;
+  }
+}
